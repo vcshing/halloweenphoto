@@ -47,12 +47,12 @@ var app = {
         var isAndroid = (/(android)/i.test(navigator.userAgent));
         var adPublisherIds = {
             ios: {
-                banner: 'ca-app-pub-3715336230214756/1812841029',
-                interstitial: 'ca-app-pub-3715336230214756/3289574225'
+                banner: 'ca-app-pub-3715336230214756/7257161828',
+                interstitial: 'ca-app-pub-3715336230214756/8733895028'
             },
             android: {
-                banner: 'ca-app-pub-3715336230214756/1812841029',
-                interstitial: 'ca-app-pub-3715336230214756/3289574225'
+                banner: 'ca-app-pub-3715336230214756/7257161828',
+                interstitial: 'ca-app-pub-3715336230214756/8733895028'
             }
         };
         var admobid;
@@ -66,8 +66,8 @@ var app = {
         if (window.admob) {
             admob.setOptions({
        			publisherId:          admobid.banner,  // Required
-				tappxIdAndroid:       "/120940746/Pub-12764-Android-7275",        // Optional
-				tappxShare:           0.5, 
+				tappxIdAndroid:       "/120940746/Pub-13014-Android-7673",        // Optional
+				tappxShare:           0.2, 
 				isTesting: false, // receiving test ads (do not test with real ads as your account will be banned)				// Optional
                 interstitialAdId: admobid.interstitial,
                 bannerAtTop: false, // set to true, to put banner at top
@@ -84,9 +84,9 @@ var app = {
              // alert('cordova-admob plugin not ready.\nAre you in a desktop browser? It won\'t work...');
         }
 		
-		setTimeout(function(){
-			app.startBannerAds();
-		},3000)
+
+		app.startBannerAds();
+		
     },
     // Bind Event Listeners
     bindAdEvents: function () {
