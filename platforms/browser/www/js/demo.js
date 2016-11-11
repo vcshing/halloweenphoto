@@ -33,7 +33,7 @@ function loadimage(page,times){
 		min_upload_date :Math.round(currenttimestamp/1000) - (timeSpace*times),
 		//min_upload_date :Math.round(moment('2016-06-01 00:00:00', 'YYYY-MM-DD HH:mm:ss').valueOf()/1000),
 		sort:"date-taken-desc",
-		text:"zombie"
+		text:"helloween"
     },
     dataType: 'jsonp',
     jsonp: 'jsoncallback'
@@ -53,7 +53,9 @@ function loadimage(page,times){
     $.each(result.photos.photo , function (index, photo) {
       var baseUrl = 'https://farm' + photo.farm + '.static.flickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret
 	  
-	  if(baseUrl+ '_s.jpg'!= "https://farm8.static.flickr.com/7772/29736178614_08f9629b04_s.jpg" && baseUrl+ '_s.jpg'!= "https://farm9.static.flickr.com/8412/29751011853_a33b2faee3_s.jpg"){
+	  if(baseUrl+ '_s.jpg'!= "https://farm8.static.flickr.com/7772/29736178614_08f9629b04_s.jpg" && baseUrl+ '_s.jpg'!= "https://farm9.static.flickr.com/8412/29751011853_a33b2faee3_s.jpg" 
+	  && baseUrl+ '_s.jpg'!= "https://farm6.static.flickr.com/5671/30744770791_50ca86449f_s.jpg"){
+		  
       $('<a/>')
         .append($('<img>').prop('src', baseUrl + '_s.jpg'))
 		.prop('class', "page" + page)
